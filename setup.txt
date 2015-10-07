@@ -2,7 +2,7 @@
 npm init
 
 # install packages and update package.json with devDependencies (as opposed to --save for dependencies)
-npm --save-dev install gulp babel del run-sequence event-stream gulp-inject
+npm --save-dev install gulp babel browser-sync del run-sequence event-stream gulp-inject
 
 # install required libraries
 bower install --config.directory=vendor react

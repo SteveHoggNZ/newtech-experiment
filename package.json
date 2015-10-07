@@ -18,6 +18,7 @@
   "homepage": "https://github.com/SteveHoggNZ/newtech-experiment",
   "devDependencies": {
     "babel": "^5.8.23",
+    "browser-sync": "^2.9.10",
     "del": "^2.0.2",
     "event-stream": "^3.3.1",
     "gulp": "^3.9.0",
