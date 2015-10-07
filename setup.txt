@@ -1,0 +1,5 @@
+# create local package.json file and node_modules folder
+npm init
+
+# install packages and update package.json
+npm --save-dev install gulp babel
