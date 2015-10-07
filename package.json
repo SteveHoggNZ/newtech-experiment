@@ -1,0 +1,27 @@
+{
+  "name": "newtech-experiment",
+  "version": "1.0.0",
+  "description": "New Tech Experiment Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SteveHoggNZ/newtech-experiment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SteveHoggNZ/newtech-experiment/issues"
+  },
+  "homepage": "https://github.com/SteveHoggNZ/newtech-experiment",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "del": "^2.0.2",
+    "event-stream": "^3.3.1",
+    "gulp": "^3.9.0",
+    "gulp-inject": "^3.0.0",
+    "run-sequence": "^1.1.4"
+  }
+}

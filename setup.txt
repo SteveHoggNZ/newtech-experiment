@@ -1,5 +1,9 @@
 # create local package.json file and node_modules folder
 npm init
 
-# install packages and update package.json
-npm --save-dev install gulp babel
+# install packages and update package.json with devDependencies (as opposed to --save for dependencies)
+npm --save-dev install gulp babel del run-sequence event-stream gulp-inject
+
+# install required libraries
+bower install --config.directory=vendor react
+bower install --config.directory=vendor rxjs
