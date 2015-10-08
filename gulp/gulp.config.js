@@ -1,8 +1,8 @@
 module.exports = {
     build_dir: 'build',
     app_files: {
-        html: ['src/**/*.html'],
-        js: ['src/**/*.js'],
+        watch_files: ['src/**/*.html', 'src/**/*.js', 'src/assets/sass/**/*.scss'],
+
         tpl_src: ['./build/app/**/*.js',
             './build/assets/css/**/*.css'],
         vendor_src: ['rx.min.js',

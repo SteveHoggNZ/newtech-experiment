@@ -2,8 +2,13 @@
 npm init
 
 # install packages and update package.json with devDependencies (as opposed to --save for dependencies)
-npm --save-dev install gulp babel browser-sync del run-sequence event-stream gulp-inject
+npm --save-dev install gulp browser-sync del run-sequence stream-series gulp-babel gulp-inject
 
 # install required libraries
 bower install --config.directory=vendor react
 bower install --config.directory=vendor rxjs
+
+# setup sass
+sudo gem update --system
+sudo gem install sass
+npm --save-dev install gulp-sass gulp-minify-css
