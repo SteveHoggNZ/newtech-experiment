@@ -52,7 +52,7 @@ gulp.task('copy-vendor-js', function() {
 
 gulp.task('compile-sass', function() {
     return gulp.src('./src/assets/sass/*.scss')
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe(minifycss())
         .pipe(gulp.dest('./src/assets/css'));
 });
