@@ -7,6 +7,8 @@ var gulp = require('gulp'),
     streamSeries = require('stream-series'),
     minifycss = require('gulp-minify-css'),
     sass = require('gulp-sass'),
+    react = require('gulp-react'),
+    jshint = require('gulp-jshint'),
     inject = require('gulp-inject');
 
 var config = require('./gulp/gulp.config.js');
@@ -16,7 +18,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('build', function(callback) {
-   runSequence('clean', 'compile-sass', 'copy-build', 'copy-injected-index', callback);
+   runSequence('clean', 'lint-app-js', 'compile-sass', 'copy-build', 'copy-injected-index', callback);
 });
 
 gulp.task('copy-build', ['copy-app-html', 'copy-app-js', 'copy-assets', 'copy-vendor-js']);
@@ -32,6 +34,15 @@ gulp.task('copy-injected-index', function() {
 gulp.task('copy-app-html', function() {
     return gulp.src('./src/**/*.html')
         .pipe(gulp.dest(config.build_dir));
+});
+
+gulp.task('lint-app-js', function() {
+    return gulp.src('./src/**/*.js')
+        .pipe(react())
+        .pipe(jshint())
+        .pipe(jshint.reporter('default', {verbose: true}));
+        // fail will cause gulp to exit
+        //.pipe(jshint.reporter('fail'));
 });
 
 gulp.task('copy-app-js', function() {

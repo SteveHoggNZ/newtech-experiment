@@ -3,7 +3,7 @@ var FriendsContainer = React.createClass({
     return {
       name: 'Tyler McGinnis',
       friends: ['Jake Lingwall', 'Murphy Randall', 'Merrick Christensen']
-    }
+    };
   },
   addFriend: function(friend){
     this.setState({
@@ -17,7 +17,7 @@ var FriendsContainer = React.createClass({
         <AddFriend addNew={this.addFriend} />
         <ShowList names={this.state.friends} />
       </div>
-    )
+    );
   }
 });
 
@@ -25,7 +25,7 @@ var AddFriend = React.createClass({
   getInitialState: function(){
     return {
       newFriend: ''
-    }
+    };
   },
   updateNewFriend: function(e){
     this.setState({
@@ -60,7 +60,7 @@ var ShowList = React.createClass({
           {listItems}
         </ul>
       </div>
-    )
+    );
   }
 });
 

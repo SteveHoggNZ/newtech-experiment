@@ -12,3 +12,6 @@ bower install --config.directory=vendor rxjs
 sudo gem update --system
 sudo gem install sass
 npm --save-dev install gulp-sass gulp-minify-css
+
+# setup linting for react
+npm --save-dev install gulp-sass gulp-react gulp-jshint

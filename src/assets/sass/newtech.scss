@@ -1,9 +1,11 @@
-$primaryColor: yellow;
-$secondaryColor: blue;
+$primaryColor: green;
+$secondaryColor: orange;
 
 body {
   background: $primaryColor;
   margin: 20px;
+  padding: 10px;
+  border: 1px solid $secondaryColor;
   h3 {
     color: $secondaryColor;
   }
